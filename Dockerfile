@@ -6,7 +6,7 @@ COPY go.mod ./
 RUN go mod tidy
 
 COPY . .
-RUN  CGO_UNABLED=0 GOOS=linux go build -o app
+RUN  CGO_ENABLED=0 GOOS=linux go build -o app
 
 FROM scratch
 WORKDIR /app
